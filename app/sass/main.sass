@@ -10,6 +10,12 @@ body
 		margin: 0
 	a
 		color: #fff
+		text-decoration: none
+		cursor: pointer
+	ul
+		list-style: none	
+	button
+		cursor: pointer
 	.link
 		font-weight: 600
 		background-color: #db7c2e
@@ -162,7 +168,9 @@ body
 			color: #00352a
 		h2
 			margin-bottom: 30px
-		p
+		.pleasure-desrc
+			width: 764px
+			margin: auto
 			margin-bottom: 50px
 		.genplan
 			font-weight: 600
@@ -170,11 +178,12 @@ body
 			background-color: #db7c2e
 			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out
 			text-decoration: none
-			padding: 20px 40px
+			padding: 17px 67px
 	section.select-you-house
 		background-color: #00352a
 		padding-top: 100px
 		padding-bottom: 120px
+		margin-bottom: 57px
 		h2
 			text-align: center
 			font-size: 68px
@@ -199,4 +208,197 @@ body
 			margin-top: 190px
 		.list-house
 			display: flex
-			justify-content: space-between
+			flex-wrap: wrap
+			.item
+				width: 411px
+				margin-right: 220px
+				margin-bottom: 109px
+				min-height: 560px
+			.item
+				&:nth-child(2n)
+					margin-right: 0
+				.size
+					color: #ffffff
+					font-size: 43px
+					line-height: 1.2
+					font-weight: 700
+					margin-bottom: 43px
+					text-align: center
+				.slide-images	
+					width: 411px
+					position: relative
+					.item-img
+						width: 411px
+					.second
+						display: none
+						width: 411px
+					.link.slide-desrc
+						color: #ffffff
+						font-size: 18px
+						font-weight: 400
+						padding: 9px 8px
+						height: 23px
+						position: absolute
+						bottom: 0px
+						margin-left: 50%
+						width: 66%
+						transform: translateX(-50%)
+						text-align: center
+					.slide-buttons
+						cursor: pointer
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						width: 100%
+						img
+							position: absolute
+							width: 30px
+							height: 30px
+							background-color: rgb(232, 232, 232)
+							border-radius: 100%
+						img.first-button
+							left: 20px
+							transform: rotate(180deg)
+						img.second-button
+							right: 20px
+				.slide-click
+					margin-top: 20px
+					margin-bottom: 10px
+					display: flex
+					justify-content: center
+					cursor: pointer
+					.click-orange
+						width: 8px
+						height: 8px
+						background-color: rgb(219, 124, 46)
+						border-radius: 100%
+						margin-right: 10px
+					.click-white
+						width: 8px
+						height: 8px
+						background-color: #ffF
+						border-radius: 100%
+				.list-desrc
+					font-size: 18px
+					color: #fff
+					font-weight: 300
+					text-align: center
+					margin-bottom: 21px
+					strong
+						font-weight: 700
+				.link.bnt
+					color: #ffffff
+					font-size: 18px
+					font-weight: 400
+					padding: 10px 22px
+					margin-left: 134px
+	section.slider
+		background: #fff
+		.slider-title
+			color: #00352a
+			font-size: 32px
+			font-weight: 700
+			line-height: 1.55
+			margin-bottom: 97px
+			text-align: center
+		.slider-block
+			display: flex
+			justify-content: space-around
+			.slider-naturele
+				width: 760px
+				height: 420px
+		.slider-block-points
+			.points
+				background-color: #eee
+				width: 8px
+				height: 8px
+				border-radius: 100px
+				transition: all ease-in-out .2s
+				cursor: pointer
+				&:hover
+					background-color: #222
+	section.news
+		background: #efefef
+		padding-top: 45px
+		padding-bottom: 90px
+		.news-title
+			font-weight: 600
+			color: #000
+			margin-bottom: 20px
+			font-size: 42px
+			text-align: center
+		.news-list
+			margin: 0
+			display: flex
+			flex-wrap: wrap
+			padding: 0
+			.news-item
+				max-width: 360px
+				background-color: #ffffff
+				margin-right: 20px
+				margin-bottom: 90px
+			.news-item
+				&:nth-child(3n)
+					margin-right: 0
+				.backgraund-news
+					background: url("../images/home-white.webp")
+					background-position: center
+					background-repeat: no-repeat
+					background-size: cover
+					margin-bottom: 20px
+					height: 268px
+				.backgraund-news.block
+					background: url("../images/breck.webp")
+					background-position: center
+					background-repeat: no-repeat
+					background-size: cover
+					margin-bottom: 20px
+					height: 268px
+				.backgraund-news.block-bg
+					background: url("../images/breck-bg.webp")
+					background-position: center
+					background-repeat: no-repeat
+					background-size: cover
+					margin-bottom: 20px
+					height: 268px
+				.news-info
+					padding: 5px 30px 27px
+					min-height: 300px
+					.news-desrc
+						font-size: 20px
+						font-weight: 600
+						color: #000
+						margin-bottom: 20px
+					.news-desrciption,
+					.news-tel-link
+						color: rgba(0,0,0,.9)
+						font-size: 14px
+						line-height: 1.55
+						padding-bottom: 15px
+					.news-time
+						font-size: 10px
+						letter-spacing: 1px
+						color: rgba(0,0,0,.5)
+						padding-bottom: 25px
+					.news-button-bnt
+						margin-top: 25px
+						.news-bnt
+							color: #ffffff
+							background-color: #000000
+							border: 0
+							font-size: 14px
+							font-weight: 700
+							padding: 15px 30px
+		.button-bottom
+			display: flex
+			flex-direction: column
+			align-items: center
+		.news-bnt.button
+			color: rgb(255, 255, 255)
+			background-color: rgb(0, 0, 0)
+			font-weight: 700
+			font-size: 16px
+			border: 0
+			padding: 21px 57px
+
+
