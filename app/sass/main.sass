@@ -5,7 +5,7 @@ body
 	line-height: 1.2
 	font-size: 18px
 	color: #fff
-	p,h1,h2
+	p,h1,h2,h3
 		padding: 0
 		margin: 0
 	a
@@ -14,6 +14,8 @@ body
 		cursor: pointer
 	ul
 		list-style: none	
+		margin: 0
+		padding: 0
 	button
 		cursor: pointer
 	.link
@@ -304,19 +306,23 @@ body
 		.slider-block
 			display: flex
 			justify-content: space-around
+			position: relative
 			.slider-naturele
 				width: 760px
 				height: 420px
-		.slider-block-points
-			.points
-				background-color: #eee
-				width: 8px
-				height: 8px
-				border-radius: 100px
-				transition: all ease-in-out .2s
-				cursor: pointer
-				&:hover
-					background-color: #222
+				padding: 0 99px 105px 99px
+			.slider-block-points
+				position: absolute
+				bottom: 130px
+				.points
+					background-color: #eee
+					width: 8px
+					height: 8px
+					border-radius: 100px
+					transition: all ease-in-out .2s
+					cursor: pointer
+					&:hover
+						background-color: #222
 	section.news
 		background: #efefef
 		padding-top: 45px
@@ -324,7 +330,7 @@ body
 		.news-title
 			font-weight: 600
 			color: #000
-			margin-bottom: 20px
+			margin-bottom: 90px
 			font-size: 42px
 			text-align: center
 		.news-list
@@ -369,7 +375,7 @@ body
 						font-weight: 600
 						color: #000
 						margin-bottom: 20px
-					.news-desrciption,
+					.news-description,
 					.news-tel-link
 						color: rgba(0,0,0,.9)
 						font-size: 14px
@@ -400,5 +406,161 @@ body
 			font-size: 16px
 			border: 0
 			padding: 21px 57px
+	section.best
+		margin-top: 275px
+		margin-bottom: 216px
+		.section-title.best-title
+			color: #00352a
+			text-align: center
+			font-size: 34px
+			margin-bottom: 29px
+		.best-title-desc
+			color: #00352a
+			font-size: 20px
+			font-weight: 400
+			text-align: center
+			width: 825px
+			margin: auto
+			line-height: 1.55
+			margin-bottom: 114px
+		.best-list
+			display: flex
+			flex-wrap: wrap
+			.best-item
+				width: 300px
+				margin-right: 131px
+				margin-bottom: 200px
+			.best-item
+				&:nth-child(3n)
+					margin-right: 0
+				.best-item-desc
+					color: #db7c2e
+					font-size: 25px
+					line-height: 1.55
+					font-weight: 700
+					padding-bottom: 32px
+				.best-description
+					color: #00352a
+					font-size: 14px
+					line-height: 1.55
+					font-weight: 400
+				.best-list-description
+					padding-top: 35px
+					padding-left: 20px
+					list-style: disc
+					color: #00352a
+					font-size: 14px
+					line-height: 1.55
+					font-weight: 400
+	section.home-dream
+		margin-bottom: 40px
+		.section-title.home-dream-title
+			color: #00352a
+			font-size: 34px
+			line-height: 1.55
+			font-weight: 700
+			margin-bottom: 42px
+			text-align: center
+		.home-dream-title-description
+			color: #00352a
+			font-size: 20px
+			line-height: 1.55
+			font-weight: 400
+			width: 798px
+			text-align: center
+			margin: auto
+			margin-bottom: 59px
+			.home-dream-link
+				color: #ff8562
+				font-size: 20px
+				line-height: 1.55
+				font-weight: 400
+				text-decoration: underline
+				margin-bottom: 60px
+		.home-dream-preview
+			opacity: 0.8
+			background-color: #00352a
+			.home-dream-list
+				padding: 44px 130px 49px 172px
+				display: flex
+				flex-wrap: wrap
+				.home-dream-item
+					display: flex
+					flex-wrap: wrap
+					padding-right: 130px
+				.home-dream-item
+					&:nth-child(3n)
+						padding-right: 0
+				.home-dream-item
+					&:first-child
+						padding-bottom: 20px
+					.home-dream-number
+						font-size: 52px
+						line-height: 1.55
+						font-weight: 700
+						color: #ffffff
+						padding-right: 34px
+					.home-dream-descr
+						color: #ffffff
+						font-size: 20px
+						line-height: 1.25
+						font-weight: 400
+						width: 136px
+						padding-top: 17px
+	section.construction
+		margin-top: 51px
+		.construction-block-img
+			margin-bottom: 38px
+			text-align: center
+			.construction-img
+				width: 80px
+				height: 80px
+		.section-title.construction-title
+			color: #000
+			font-size: 34px
+			line-height: 1.55
+			font-weight: 700
+			margin-bottom: 39px
+			text-align: center
+		.construction-title-description
+			color: #00352a
+			font-size: 20px
+			line-height: 1.55
+			font-weight: 400
+			text-align: center
+			width: 798px
+			margin: auto
+			margin-bottom: 72px
+		.construction-choice
+			width: 760px
+			margin: auto
+			margin-bottom: 75px
+			.construction-choice-list
+				border: 1px solid #222222
+				height: 67px
+				display: flex
+				justify-content: space-around
+				.construction-choice-item.active
+					background: #00352a
+				.construction-choice-item
+					border-right: 1px solid #222
+					padding: 13px 21px
+				.construction-choice-item
+					&:last-child
+						border: 0
+					.construction-choice-link.active
+						color: #fff
+					.construction-choice-link
+						color: #000000
+						font-size: 14px
+						font-weight: 400
+		.construction-choice-block-link
+			.construction-choice-block
+				.construction-choice-image
+					.construction-image.none
+						display: none
+			
+
+
 
 
