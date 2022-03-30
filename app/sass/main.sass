@@ -296,6 +296,7 @@ body
 					margin-left: 134px
 	section.slider
 		background: #fff
+		overflow: hidden
 		.slider-title
 			color: #00352a
 			font-size: 32px
@@ -408,7 +409,6 @@ body
 			padding: 21px 57px
 	section.best
 		margin-top: 275px
-		margin-bottom: 216px
 		.section-title.best-title
 			color: #00352a
 			text-align: center
@@ -429,10 +429,17 @@ body
 			.best-item
 				width: 300px
 				margin-right: 131px
-				margin-bottom: 200px
+				margin-bottom: 105px
 			.best-item
 				&:nth-child(3n)
 					margin-right: 0
+				.best-images
+					width: 80px
+					height: 62px
+					padding-bottom: 42px
+				.best-images-img
+					width: 61px
+					padding-bottom: 42px
 				.best-item-desc
 					color: #db7c2e
 					font-size: 25px
@@ -454,6 +461,11 @@ body
 					font-weight: 400
 	section.home-dream
 		margin-bottom: 40px
+		.home-dream-img
+			text-align: center
+			.home-dream-images
+				width: 80px
+				height: 94px
 		.section-title.home-dream-title
 			color: #00352a
 			font-size: 34px
@@ -509,6 +521,7 @@ body
 						padding-top: 17px
 	section.construction
 		margin-top: 51px
+		margin-bottom: 140px
 		.construction-block-img
 			margin-bottom: 38px
 			text-align: center
@@ -542,23 +555,263 @@ body
 				justify-content: space-around
 				.construction-choice-item.active
 					background: #00352a
+					.construction-choice-link
+						color: #fff
 				.construction-choice-item
 					border-right: 1px solid #222
 					padding: 13px 21px
+					display: flex
+					align-items: center
+					text-align: center
+					cursor: pointer
 				.construction-choice-item
 					&:last-child
 						border: 0
-					.construction-choice-link.active
-						color: #fff
 					.construction-choice-link
 						color: #000000
 						font-size: 14px
 						font-weight: 400
 		.construction-choice-block-link
 			.construction-choice-block
+				display: none
+			.construction-choice-block.active
+				display: flex
 				.construction-choice-image
+					margin-right: 40px
+					.construction-image
+						width: 660px
 					.construction-image.none
+						width: 660px
 						display: none
+					.slide-buttons
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						width: 100%
+						.first-button,
+						.second-button
+							position: absolute
+							width: 30px
+							height: 30px
+							background-color: #e8e8e8
+							border-radius: 100%
+						.first-button
+							transform: rotate(180deg)
+							left: 20px
+						.second-button
+							right: 20px
+				.construction-choice-description
+					width: 360px
+					.construction-description
+						font-weight: 700
+						margin-bottom: 18px
+						font-size: 24px
+						line-height: 1.35
+						color: #000
+					.construction-description-descr
+						margin-bottom: 42px
+					.construction-description-descr,
+					.construction-description-descr-text
+						font-weight: 400
+						color: #000
+						font-size: 16px
+						line-height: 1.55
+					.construction-description-list
+						list-style: decimal
+						.construction-description-item
+							font-weight: 400
+							color: #000
+							font-size: 16px
+							line-height: 1.55
+							margin-left: 20px
+	section.payment
+		background: #00352a
+		.section-title.payment-title
+			font-weight: 700
+			font-size: 43px
+			line-height: 1.2
+			padding-top: 34px
+			padding-bottom: 56px
+			text-align: center
+		.payment-title-description
+			color: #ffffff
+			line-height: 1.55
+			font-weight: 400
+			font-size: 20px
+			width: 843px
+			margin: auto
+			text-align: center
+			padding-bottom: 86px
+		.payment-options
+			padding-bottom: 77px
+			.payment-list
+				display: flex
+				justify-content: space-evenly
+				.payment-item
+					display: flex
+					&:first-child
+						.payment-descr
+							padding-top: 13px
+					.payment-number
+						font-weight: 700
+						font-size: 88px
+						color: #fff
+						padding-right: 21px
+						opacity: 0.3
+					.payment-descr
+						font-weight: 700
+						line-height: 1.2
+						font-size: 43px
+						width: 326px
+						padding-top: 31px
+						
+	section.map
+		height: 900px
+		&>ymaps
+			width: 100%
+			position: absolute
+			height: 900px!important
+		.map-info
+			position: relative
+			top: 120px
+			background: #fff
+			padding: 57px 0 24px 60px
+			width: 460px
+			.section-title.map-title
+				font-size: 28px
+				line-height: 1.17
+				color: #000
+				font-weight: 700
+				padding-bottom: 40px
+			.map-description
+				font-weight: 400
+				color: #000
+				font-size: 18px
+				line-height: 1.55
+				padding-bottom: 40px
+				width: 340px
+			.map-descr
+				padding-bottom: 40px
+				font-weight: 400
+				color: #000
+				font-size: 18px
+				line-height: 1.55
+				width: 340px
+			.map-link-email
+				display: flex
+				flex-direction: column
+				.map-link,
+				.map-email
+					font-size: 18px
+					font-weight: 400
+				.map-link
+					padding-bottom: 16px
+					color: #000
+				.map-email
+					padding-bottom: 40px
+					color: #ff8562
+
+	section.footer
+		background: #00352a
+		.footer-flex
+			padding-top: 56px
+			display: flex
+			justify-content: space-between
+			.footer-left
+				padding-right: 127px
+				.footer-icon
+					padding-bottom: 42px
+					.footer-left-logo
+						width: 78px
+						padding-right: 32px
+					.footer-left-logotip
+						width: 174px
+						height: 39px
+				.footer-left-list
+					.footer-left-item
+						padding-bottom: 39px
+						&:nth-child(2n)
+									padding-bottom: 0
+						.footer-left-link
+							color: #ff8562
+							font-size: 16px
+							font-weight: 400
+							line-height: 1.55
+			.footer-center
+				display: flex
+				.footer-center-list
+					padding-right: 119px
+					.footer-center-item
+						padding-bottom: 40px
+						.footer-center-link
+							font-size: 16px
+							line-height: 1.55
+							font-weight: 400
+							color: #ff8562
+				.footer-center-list-ul
+					padding-bottom: 40px
+					.footer-center-item
+						padding-bottom: 40px
+						.footer-center-link
+							font-size: 16px
+							line-height: 1.55
+							font-weight: 400
+							color: #ff8562
+			.footer-right
+				padding-bottom: 41px
+				.footer-right-link
+					display: flex
+					flex-direction: column
+					padding-bottom: 33px
+					.footer-right-tel
+						padding-bottom: 15px
+						font-size: 15px
+					.footer-right-mail
+						color: #ff8562
+						font-size: 15px
+				.footer-right-block
+					padding-bottom: 33px
+					.footer-right-descr
+						font-size: 15px
+						padding-bottom: 37px
+					.footer-right-address
+						font-style: normal
+						font-size: 15px
+				.footer-right-bottom
+					padding-bottom: 20px
+					.footer-bottom-descr
+						padding-bottom: 13px
+						font-size: 15px
+					.footer-bottom-description
+						font-size: 15px
+			.footer-right-icon
+				display: flex
+				justify-content: space-between
+				.footer-right-icon
+					width: 32px
+				.footer-right-icon-vk
+					width: 41px
+		.footer-bottom-small
+			display: flex
+			flex-direction: row-reverse
+			padding-bottom: 47px
+			.footer-small
+				font-size: 13px
+						
+
+
+
+
+								
+									
+
+
+
+
+
+
+
+
 			
 
 
