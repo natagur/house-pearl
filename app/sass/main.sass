@@ -208,9 +208,11 @@ body
 			text-align: center
 			font-size: 43px
 			margin-top: 190px
+			margin-bottom: 123px
 		.list-house
 			display: flex
 			flex-wrap: wrap
+			justify-content: center
 			.item
 				width: 411px
 				margin-right: 220px
@@ -229,11 +231,15 @@ body
 				.slide-images	
 					width: 411px
 					position: relative
-					.item-img
+					&>img
 						width: 411px
-					.second
-						display: none
-						width: 411px
+						opacity: 0
+						transition: all 0.5s ease-out
+						height: 0
+						display: inherit
+					&>img.active
+						opacity: 1
+						height: auto
 					.link.slide-desrc
 						color: #ffffff
 						font-size: 18px
@@ -272,14 +278,11 @@ body
 					.click-orange
 						width: 8px
 						height: 8px
-						background-color: rgb(219, 124, 46)
-						border-radius: 100%
-						margin-right: 10px
-					.click-white
-						width: 8px
-						height: 8px
 						background-color: #ffF
 						border-radius: 100%
+						margin-right: 15px
+					.click-orange.active
+						background-color: rgb(219, 124, 46)
 				.list-desrc
 					font-size: 18px
 					color: #fff
@@ -297,6 +300,8 @@ body
 	section.slider
 		background: #fff
 		overflow: hidden
+		padding-bottom: 105px
+		position: relative
 		.slider-title
 			color: #00352a
 			font-size: 32px
@@ -308,22 +313,57 @@ body
 			display: flex
 			justify-content: space-around
 			position: relative
+			transition: all 0.5s ease-out
 			.slider-naturele
-				width: 760px
+				min-width: 760px
 				height: 420px
-				padding: 0 99px 105px 99px
-			.slider-block-points
+				padding: 0 50px 0 50px
+		.slide-buttons
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			.first-button
+				background: #fff
+				opacity: 0.7
+				width: calc(50% - 600px)
+				height: 100%
+				cursor: pointer
 				position: absolute
-				bottom: 130px
-				.points
-					background-color: #eee
-					width: 8px
-					height: 8px
-					border-radius: 100px
-					transition: all ease-in-out .2s
-					cursor: pointer
-					&:hover
-						background-color: #222
+				transform: rotate(180deg)
+				padding-left: 140px
+				left: 0
+				top: 0
+			.second-button
+				height: 100%
+				background: #fff
+				opacity: 0.7
+				width: calc(50% - 600px)
+				cursor: pointer
+				position: absolute
+				padding-left: 140px
+				right: 0
+				top: 0
+		.slide-click
+			position: absolute
+			bottom: 130px
+			display: flex
+			left: 50%
+			transform: translateX(-50%)
+			.click-orange
+				margin-right: 9px
+				background-color: #eee
+				width: 8px
+				height: 8px
+				border-radius: 100px
+				transition: all ease-in-out .2s
+				cursor: pointer
+				&:hover
+					background-color: #222
+				&:last-child
+					margin-right: 0
+				&.active
+					background-color: #222
 	section.news
 		background: #efefef
 		padding-top: 45px
@@ -427,12 +467,14 @@ body
 			display: flex
 			flex-wrap: wrap
 			.best-item
-				width: 300px
+				width: 269px
 				margin-right: 131px
 				margin-bottom: 105px
 			.best-item
 				&:nth-child(3n)
 					margin-right: 0
+				&:last-child
+					width: 356px
 				.best-images
 					width: 80px
 					height: 62px
@@ -442,7 +484,7 @@ body
 					padding-bottom: 42px
 				.best-item-desc
 					color: #db7c2e
-					font-size: 25px
+					font-size: 23px
 					line-height: 1.55
 					font-weight: 700
 					padding-bottom: 32px
@@ -564,6 +606,7 @@ body
 					align-items: center
 					text-align: center
 					cursor: pointer
+					transition: all 0.5s ease-out
 				.construction-choice-item
 					&:last-child
 						border: 0
@@ -571,18 +614,38 @@ body
 						color: #000000
 						font-size: 14px
 						font-weight: 400
+						transition: all 0.5s ease-out
 		.construction-choice-block-link
 			.construction-choice-block
-				display: none
+				opacity: 0
+				transition: all 0.5s ease-out
+				height: 0
+				width: 0
+				overflow: hidden
 			.construction-choice-block.active
+				opacity: 1
+				height: auto
+				width: auto
 				display: flex
 				.construction-choice-image
 					margin-right: 40px
+					position: relative
 					.construction-image
-						width: 660px
-					.construction-image.none
-						width: 660px
-						display: none
+						opacity: 0
+						transition: all 0.5s ease-out
+						height: 0
+						&.active
+							width: 660px
+							opacity: 1
+							height: auto
+					.slide-click
+						margin-top: 10px
+						&>img.click-orange 
+							width: 60px
+							height: 60px
+							outline: 2px solid #fff
+							&.active
+								outline: 2px solid rgba(0,0,0,.15)
 					.slide-buttons
 						position: absolute
 						top: 50%
