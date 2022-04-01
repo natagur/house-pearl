@@ -28,26 +28,49 @@ body
 	.container
 		width: 1162px
 		margin: 0 auto
+		@media (max-width: 360px)
+			width: 100%
 	section.main
 		background: url("/images/three-house-040000_.webp")
 		.short-desc
 			opacity: 0.95
 			background-color: #00352a
 			background-position: center center
-			width: 603px
+			width: 52%
 			padding: 40px
 			margin-bottom: 50px
+			@media (max-width: 360px)
+				width: 100%
+				padding: 0 2px 15px 14px
 			.row
 				display: flex
+				padding-bottom: 30px
+				.main-short-desc-icon
+					margin-right: 41px
+					@media (max-width: 360px)
+						margin-top: -7px
+						margin-right: 16px
 				img
 					width: 100px
 					padding: 0px 20px 20px 0px
 				.short-desc-first
 					font-size: 31px
 					font-weight: 700
+					@media (max-width: 360px)
+						font-size: 20px
+			.section-title.main-title
+				display: none
+				@media (max-width: 360px)
+					display: block
+					font-size: 13px
+					font-weight: 700
+					padding-left: 20px
+					padding-bottom: 10px
 			.short-desc-second
 				font-size: 22px
 				font-weight: 400
+				@media (max-width: 360px)
+					font-size: 13px
 		.form-call-link
 			font-weight: 600
 			border-radius: 30px
@@ -61,14 +84,19 @@ body
 			background-color: #00352a
 			margin-top: 285px
 			padding: 20px
-			h1
+			.section-title.main-title
 				text-align: center
 				font-size: 31px
+				display: block
+				@media (max-width: 360px)
+					display: none
 			.list-plus
 				display: flex
 				position: relative
 				margin-top: 30px
 				margin-bottom: 30px
+				@media (max-width: 360px)
+					display: block
 				&:after
 					content: ""
 					background: url("/images/discount.svg")
@@ -82,22 +110,48 @@ body
 					position: absolute
 					z-index: -1
 					height: 150px
+					@media (max-width: 360px)
+						display: none
 				.item
 					display: flex
 					width: 25%
+					@media (max-width: 360px)
+						width: 100%
+						padding: 0 0 36px 51px
 					img
 						width: 50px
 						height: 50px
 						margin-right: 15px
 					p
 						font-size: 20px
+							// &:after
+							// 	content: ""
+							// 	background: url("/images/discount.svg")
+							// 	background-repeat: no-repeat
+							// 	background-position: center
+							// 	opacity: 0.15
+							// 	top: 0
+							// 	left: 0
+							// 	bottom: 0
+							// 	right: 0
+							// 	position: absolute
+							// 	z-index: -1
+							// 	height: 150px
+							// 	@media (max-width: 360px)
+							// 		display: block
 	section.form
 		background-color: #00352a
 		padding-top: 20px
 		padding-bottom: 20px
 		.desc
+			@media (max-width: 360px)
+				line-height: 1.55
+				padding: 10px 0 20px 20px
 			&>*
 				margin-bottom: 15px
+			p
+				@media (max-width: 360px)
+					font-size: 14px
 			.hide
 				display: none
 			h3
@@ -110,15 +164,32 @@ body
 		.form-block
 			margin-top: 100px
 			display: flex
+			@media (max-width: 360px)
+				display: block
+			.section-title.form-block-title
+				display: none
+				@media (max-width: 360px)
+					display: block
+					font-size: 29px
+					text-align: center
+					width: 95%
+					margin: auto
+					padding-bottom: 20px
 			img
 				margin-right: 60px
 				object-fit: contain
+				@media (max-width: 360px)
+					width: 100%
+					margin-right: 0
 			form
-				h2
+				padding: 40px
+				.section-title.form-block-title
 					font-size: 36px
 					font-weight: 600
 					margin-bottom: 30px
 					letter-spacing: -0.2px
+					@media (max-width: 360px)
+						display: none
 				input
 					color: #fff
 					border: 1px solid #ffffff
@@ -138,6 +209,10 @@ body
 					-webkit-appearance: none
 					border-radius: 0
 					margin-bottom: 20px
+					@media (max-width: 360px)
+						width: 104%
+						&:last-child
+							margin-top: 0
 				button
 					color: #fff
 					background-color: #db7c2e
@@ -151,18 +226,27 @@ body
 					border: 0
 					cursor: pointer
 					margin-bottom: 20px
+					@media (max-width: 360px)
+						margin: auto
+						margin-bottom: 35px
 				p
 					font-size: 12px
 					line-height: 1.55
 					font-weight: 400
+					@media (max-width: 360px)
+						text-align: center
 	section.youtube
 		padding-top: 130px
 		padding-bottom: 180px
 		.container
-			display: flex
+			display: block
 			iframe
 				&:first-child
 					margin-right: 20px
+					@media (max-width: 360px)
+						margin-right: 0
+						&:first-child
+							margin-bottom: 20px
 	section.life-for-pleasure
 		text-align: center
 		margin-bottom: 80px
@@ -170,10 +254,14 @@ body
 			color: #00352a
 		h2
 			margin-bottom: 30px
+			@media (max-width: 360px)
+				font-size: 23px
 		.pleasure-desrc
-			width: 764px
+			width: 76%
 			margin: auto
 			margin-bottom: 50px
+			@media (max-width: 360px)
+				font-size: 15px
 		.genplan
 			font-weight: 600
 			border-radius: 30px
@@ -181,6 +269,9 @@ body
 			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out
 			text-decoration: none
 			padding: 17px 67px
+			@media (max-width: 360px)
+				font-size: 16px
+				padding: 17px 98px
 	section.select-you-house
 		background-color: #00352a
 		padding-top: 100px
@@ -189,35 +280,71 @@ body
 		h2
 			text-align: center
 			font-size: 68px
+			@media (max-width: 360px)
+				font-size: 40px
 		.main-house
 			margin-top: 120px
 			display: flex
 			justify-content: space-between
-			.params
-				display: flex
-				align-items: center
-				margin-bottom: 20px
-				img
-					width: 36px
-					margin-right: 30px
-				a
-					color: #00352a
-			p
-				max-width: 430px
+			@media (max-width: 360px)
+				margin-top: 50px
+				display: block
+			.right-side
+				display: block
+				@media (max-width: 360px)
+					display: none
+			.right-side
+				.select-you-house-image
+					width: 100%
+			.left-side
+				.params
+					display: flex
+					align-items: center
+					margin-bottom: 20px
+					@media (max-width: 360px)
+						padding-left: 52px
+					img
+						width: 36px
+						margin-right: 30px
+					a
+						color: #00352a
+				p
+					max-width: 430px
+					@media (max-width: 360px)
+						font-size: 15px
+						padding: 30px 20px
+						text-align: center
+						line-height: 1.55
+						width: 61%
+						margin: auto
+				.right-side.mobile 
+					display: none
+					@media (max-width: 360px)
+						display: block
 		h3
 			text-align: center
 			font-size: 43px
 			margin-top: 190px
 			margin-bottom: 123px
+			@media (max-width: 360px)
+				font-size: 29px
+				margin-top: 80px
+				margin-bottom: 55px
 		.list-house
 			display: flex
 			flex-wrap: wrap
 			justify-content: center
+			@media (max-width: 360px)
+				display: block
 			.item
 				width: 411px
 				margin-right: 220px
 				margin-bottom: 109px
 				min-height: 560px
+				@media (max-width: 360px)
+					width: 100%
+					margin-bottom: 25px
+					min-height: 495px
 			.item
 				&:nth-child(2n)
 					margin-right: 0
@@ -228,15 +355,20 @@ body
 					font-weight: 700
 					margin-bottom: 43px
 					text-align: center
+					@media (max-width: 360px)
+						font-size: 29px
+						margin-bottom: 25px
 				.slide-images	
 					width: 411px
 					position: relative
 					&>img
-						width: 411px
+						width: 100%
 						opacity: 0
 						transition: all 0.5s ease-out
 						height: 0
 						display: inherit
+						@media (max-width: 360px)
+							width: 87.6%
 					&>img.active
 						opacity: 1
 						height: auto
@@ -252,6 +384,10 @@ body
 						width: 66%
 						transform: translateX(-50%)
 						text-align: center
+						@media (max-width: 360px)
+							font-size: 14px
+							height: 14px
+							margin-left: 44%
 					.slide-buttons
 						cursor: pointer
 						position: absolute
@@ -269,6 +405,8 @@ body
 							transform: rotate(180deg)
 						img.second-button
 							right: 20px
+							@media (max-width: 360px)
+								right: 68px
 				.slide-click
 					margin-top: 20px
 					margin-bottom: 10px
@@ -289,6 +427,11 @@ body
 					font-weight: 300
 					text-align: center
 					margin-bottom: 21px
+					@media (max-width: 360px)
+						font-size: 14px
+						width: 76%
+						margin: auto
+						padding-bottom: 10px
 					strong
 						font-weight: 700
 				.link.bnt
@@ -297,6 +440,10 @@ body
 					font-weight: 400
 					padding: 10px 22px
 					margin-left: 134px
+					@media (max-width: 360px)
+						font-size: 14px
+						padding: 4px 18px
+						margin-left: 125px
 	section.slider
 		background: #fff
 		overflow: hidden
@@ -374,16 +521,24 @@ body
 			margin-bottom: 90px
 			font-size: 42px
 			text-align: center
+			@media (max-width: 360px)
+				font-size: 30px
+				margin-bottom: 45px
 		.news-list
 			margin: 0
 			display: flex
 			flex-wrap: wrap
 			padding: 0
+			@media (max-width: 360px)
+				display: block
+				padding-left: 20px
 			.news-item
 				max-width: 360px
 				background-color: #ffffff
 				margin-right: 20px
 				margin-bottom: 90px
+				@media (max-width: 360px)
+					margin-bottom: 60px
 			.news-item
 				&:nth-child(3n)
 					margin-right: 0
@@ -448,28 +603,44 @@ body
 			border: 0
 			padding: 21px 57px
 	section.best
-		margin-top: 275px
+		margin-top: 47px
+		.best-icon-logo
+			margin-bottom: 63px
+			margin: auto
 		.section-title.best-title
 			color: #00352a
 			text-align: center
 			font-size: 34px
 			margin-bottom: 29px
+			@media (max-width: 360px)
+				font-size: 25px
+				margin-bottom: 14px
 		.best-title-desc
 			color: #00352a
 			font-size: 20px
 			font-weight: 400
 			text-align: center
-			width: 825px
+			width: 80%
 			margin: auto
 			line-height: 1.55
 			margin-bottom: 114px
+			@media (max-width: 360px)
+				font-size: 17px
+				width: 81%
+				margin-bottom: 86px
 		.best-list
 			display: flex
 			flex-wrap: wrap
+			@media (max-width: 360px)
+				display: block
 			.best-item
-				width: 269px
-				margin-right: 131px
+				width: 277px
+				margin-right: 123px
 				margin-bottom: 105px
+				@media (max-width: 360px)
+					width: 100%
+					margin-right: 0
+					margin-bottom: 50px
 			.best-item
 				&:nth-child(3n)
 					margin-right: 0
@@ -479,20 +650,30 @@ body
 					width: 80px
 					height: 62px
 					padding-bottom: 42px
+					@media (max-width: 360px)
+						margin: auto
 				.best-images-img
 					width: 61px
+					height: 62px
 					padding-bottom: 42px
+					@media (max-width: 360px)
+						margin: auto
 				.best-item-desc
 					color: #db7c2e
 					font-size: 23px
 					line-height: 1.55
 					font-weight: 700
 					padding-bottom: 32px
+					@media (max-width: 360px)
+						font-size: 25px
+						text-align: center
 				.best-description
 					color: #00352a
 					font-size: 14px
 					line-height: 1.55
 					font-weight: 400
+					@media (max-width: 360px)
+						padding-left: 32px
 				.best-list-description
 					padding-top: 35px
 					padding-left: 20px
@@ -501,6 +682,8 @@ body
 					font-size: 14px
 					line-height: 1.55
 					font-weight: 400
+					@media (max-width: 360px)
+						padding-left: 52px
 	section.home-dream
 		margin-bottom: 40px
 		.home-dream-img
@@ -508,6 +691,7 @@ body
 			.home-dream-images
 				width: 80px
 				height: 94px
+				margin: auto
 		.section-title.home-dream-title
 			color: #00352a
 			font-size: 34px
@@ -515,15 +699,20 @@ body
 			font-weight: 700
 			margin-bottom: 42px
 			text-align: center
+			@media (max-width: 360px)
+				font-size: 30px
 		.home-dream-title-description
 			color: #00352a
 			font-size: 20px
 			line-height: 1.55
 			font-weight: 400
-			width: 798px
+			width: 72%
 			text-align: center
 			margin: auto
 			margin-bottom: 59px
+			@media (max-width: 360px)
+				font-size: 16px
+				margin-bottom: 26px
 			.home-dream-link
 				color: #ff8562
 				font-size: 20px
@@ -531,6 +720,8 @@ body
 				font-weight: 400
 				text-decoration: underline
 				margin-bottom: 60px
+			@media (max-width: 360px)
+				font-size: 16px
 		.home-dream-preview
 			opacity: 0.8
 			background-color: #00352a
@@ -538,10 +729,14 @@ body
 				padding: 44px 130px 49px 172px
 				display: flex
 				flex-wrap: wrap
+				@media (max-width: 360px)
+					padding: 44px 94px 49px 119px
 				.home-dream-item
 					display: flex
 					flex-wrap: wrap
 					padding-right: 130px
+					@media (max-width: 360px)
+						flex-wrap: nowrap
 				.home-dream-item
 					&:nth-child(3n)
 						padding-right: 0
@@ -570,6 +765,7 @@ body
 			.construction-img
 				width: 80px
 				height: 80px
+				margin: auto
 		.section-title.construction-title
 			color: #000
 			font-size: 34px
@@ -583,7 +779,7 @@ body
 			line-height: 1.55
 			font-weight: 400
 			text-align: center
-			width: 798px
+			width: 75%
 			margin: auto
 			margin-bottom: 72px
 		.construction-choice
@@ -701,7 +897,7 @@ body
 			line-height: 1.55
 			font-weight: 400
 			font-size: 20px
-			width: 843px
+			width: 72.6%
 			margin: auto
 			text-align: center
 			padding-bottom: 86px
@@ -739,7 +935,7 @@ body
 			top: 120px
 			background: #fff
 			padding: 57px 0 24px 60px
-			width: 460px
+			width: 42%
 			.section-title.map-title
 				font-size: 28px
 				line-height: 1.17
@@ -860,7 +1056,7 @@ body
 			padding-bottom: 47px
 			.footer-small
 				font-size: 13px
-						
+	
 
 
 
