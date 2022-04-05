@@ -26,13 +26,19 @@ function clickSliderList(){
 $(function(){
     clickSliderList();
 
-    $(document).on('click', '.construction-choice-item', function(event){
+    $(document).on('click', '.construction-choice-item:not(.active)', function(event){
+        $(this).parent().find('.construction-choice-item').hide();
         $(this).parent().find('.construction-choice-item').removeClass('active');
         $(this).addClass('active');
-
+        
         
         $('.construction-choice-block-link .construction-choice-block').removeClass('active');
         $('.construction-choice-block-link .construction-choice-block').eq($(this).index()).addClass('active');
+
+        event.preventDefault();
+    });
+    $(document).on('click', '.construction-choice-item.active', function(event){
+        $(this).parent().find('.construction-choice-item').show();
 
         event.preventDefault();
     });
@@ -69,5 +75,24 @@ $(function(){
     $(document).on('click', '.click-orange', function(event){
         clickSlider($(this), $(this).index());
     });
+
+    $(document).on('click', '.open-hide', function(event){
+        $(this).hide();
+        $('.close-hide').show();
+        
+        $('.hide').addClass('active');
+
+        event.preventDefault();
+    });
+
+    $(document).on('click', '.close-hide', function(event){
+        $(this).hide();
+        $('.open-hide').show();
+        
+        $('.hide').removeClass('active');
+
+        event.preventDefault();
+    });
+   
 })
 
