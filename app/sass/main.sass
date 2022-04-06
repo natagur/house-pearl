@@ -31,107 +31,174 @@ body
 		@media (max-width: 1162px)
 			width: 100%
 	section.header-menu
-		background: #00352a
-		max-width: 26%
-		position: fixed
-		right: 0
-		.header-menu-burger
-			cursor: pointer
-			border-radius: 100%
-			right: 29px
-			top: 20px
-			width: 48px
-			height: 48px
-			position: absolute
-			transition: opacity ease-in-out .2s
-			background-color: #111
-			opacity: 0.50
-			.header-span-center
-				width: 100%
-				margin-left: 13px
-				.header-burger-span
-					background-color: #ffffff
-					width: 22px
-					height: 2px
-					top: 16px
-					opacity: 1
-					position: absolute
-					margin-bottom: 2px
-				.header-burger-span-one
-					background-color: #ffffff
-					width: 22px
-					height: 2px
-					top: 22px
-					opacity: 1
-					position: absolute
-				.header-burger-span-two
-					background-color: #ffffff
-					width: 22px
-					height: 2px
-					top: 28px
-					opacity: 1
-					margin-bottom: 2px
-					position: absolute
-		.header-nav
-			display: none
-			.header-right-icon
+		display: flex
+		.header-menu-right
+			max-width: 26%
+			width: 26%
+			height: 100%
+			position: fixed
+			right: 0
+			z-index: 100
+			transition: transform ease-in-out 0.3s
+			@media (max-width: 1162px)
+				max-width: 43%
+				width: 43%
+			@media (max-width: 479px)
+				max-width: 82%
+				width: 87%
+			.header-menu-burger
 				cursor: pointer
+				border-radius: 100%
+				right: 29px
+				top: 20px
+				width: 48px
+				height: 48px
 				position: absolute
-				height: 40px
-				right: 30px
-				top: 15px
-				.header-icon-span-right
-					position: absolute
-					display: block
-					top: 8px
-					background-color: #ffffff
-					width: 27px
-					transform: rotate(40deg)
-					height: 2px
-				.header-icon-span-left
-					position: relative
-					display: block
-					top: 8px
-					background-color: #ffffff
-					width: 27px
-					transform: rotate(137deg)
-					height: 2px
-			.header-list
-				padding: 48px 40px 38px
+				transition: opacity ease-in-out .2s
+				background-color: #111
+				opacity: 0.50
+				.header-span-center
+					width: 100%
+					margin-left: 13px
+					.header-burger-span
+						background-color: #ffffff
+						width: 22px
+						height: 2px
+						top: 16px
+						opacity: 1
+						position: absolute
+						margin-bottom: 2px
+					.header-burger-span-one
+						background-color: #ffffff
+						width: 22px
+						height: 2px
+						top: 22px
+						opacity: 1
+						position: absolute
+					.header-burger-span-two
+						background-color: #ffffff
+						width: 22px
+						height: 2px
+						top: 28px
+						opacity: 1
+						margin-bottom: 2px
+						position: absolute
+			.header-nav
+				width: 100%
+				background: #00352a
 				overflow-y: scroll
-				max-height: 358px
-				.header-list-item
-					font-size: 24px
-					padding-bottom: 15px
-					color: #fff
-					.header-link
-						&:active
-							color: #b2c2be
-				.header-list-item-tel,
-				.header-list-item-mail,
-				.header-list-item-descr,
-				.header-list-item-description,
-				.header-list-item-icon
-					font-size: 13px
-					color: #fff
-					padding-bottom: 25px
-				.header-list-item-tel
-					padding-top: 10px
-				.header-list-item-descr
-					.header-link-descr
-						padding-bottom: 5px
-					.header-link-address
-						font-style: normal
-				.header-list-item-description
-					.header-link-description
-						padding-bottom: 5px
-				.header-list-item-icon
-					display: flex
-					.header-list-icon
-						width: 30px
-						padding-right: 10px
-						&:last-child
-							padding-right: 0
+				height: 100%
+				opacity: 0
+				position: absolute
+				right: -100%
+				transition-duration: 1s
+				&.active
+					opacity: 1
+					right: 0
+				.header-right-icon
+					cursor: pointer
+					position: absolute
+					height: 40px
+					right: 30px
+					top: 15px
+					.header-icon-span-right
+						position: absolute
+						display: block
+						top: 8px
+						background-color: #ffffff
+						width: 27px
+						transform: rotate(40deg)
+						height: 2px
+					.header-icon-span-left
+						position: relative
+						display: block
+						top: 8px
+						background-color: #ffffff
+						width: 27px
+						transform: rotate(137deg)
+						height: 2px
+				.header-list
+					padding: 48px 40px 38px
+					max-height: 358px
+					.header-list-item
+						font-size: 24px
+						padding-bottom: 15px
+						color: #fff
+						&:hover
+							.header-link-list
+								display: block
+						.header-link
+							&:active
+								color: #b2c2be
+						.project
+							&::after
+								content: ""
+								border-color: transparent transparent transparent transparent
+								border-block-color: #fff
+								border-width: 4px 3px 0 3px
+								border-style: solid
+								position: absolute
+								margin-left: 7px
+								margin-top: 15px
+						.header-link-list
+							display: none
+							width: 150px
+							background: #fff
+							padding: 10px
+							text-align: center
+							position: absolute
+							top: -17px
+							left: 10px
+							&::before
+								content: ""
+								border: solid transparent
+								border-top-color: #fff
+								border-width: 10px
+								position: absolute
+								bottom: -20px
+								left: 45%
+								transition: 3s ease
+							.header-link-item
+								.header-link-project
+									color: #000
+									font-size: 14px
+									font-weight: 600
+									line-height: 1.35
+					.header-list-item-tel,
+					.header-list-item-mail,
+					.header-list-item-descr,
+					.header-list-item-description,
+					.header-list-item-icon
+						font-size: 13px
+						color: #fff
+						padding-bottom: 25px
+					.header-list-item-tel
+						padding-top: 10px
+					.header-list-item-descr
+						.header-link-descr
+							padding-bottom: 5px
+						.header-link-address
+							font-style: normal
+					.header-list-item-description
+						.header-link-description
+							padding-bottom: 5px
+					.header-list-item-icon
+						display: flex
+						.header-list-icon
+							width: 30px
+							padding-right: 10px
+							&:last-child
+								padding-right: 0
+		.header-menu-left
+			display: none
+			background: #7a9994
+			position: fixed
+			width: 100%
+			height: 100%
+			z-index: 99
+			opacity: 0.5
+			@media (max-width: 1162px)
+				width: 57%
 	section.main
 		background: url("/images/three-house-040000_.webp")
 		.short-desc
@@ -470,6 +537,8 @@ body
 				.select-you-house-image
 					width: 100%
 			.left-side
+				&>p
+					display: none
 				.params
 					display: flex
 					align-items: center
@@ -947,19 +1016,25 @@ body
 		.home-dream-preview
 			opacity: 0.8
 			background-color: #00352a
+			@media (max-width: 1162px)
+				margin-left: 60px
+				margin-right: 60px
 			.home-dream-list
 				padding: 44px 130px 49px 172px
 				display: flex
 				flex-wrap: wrap
+				justify-content: space-around
 				@media (max-width: 1162px)
-					padding: 20px
-					width: 150px
-					margin: auto
+					padding: 0px
+					padding-left: 103px
 				.home-dream-item
 					display: flex
 					flex-wrap: wrap
+					padding-right: 50px
 					@media (max-width: 1162px)
 						flex-wrap: nowrap
+						width: 50%
+						padding: 0
 				.home-dream-item
 					&:nth-child(3n)
 						padding-right: 0
@@ -967,7 +1042,7 @@ body
 					@media (max-width: 1162px)
 						align-items: center
 					&:first-child
-						padding-bottom: 20px
+						padding-bottom: 0px
 					.home-dream-number
 						font-size: 52px
 						line-height: 1.55
@@ -1414,7 +1489,120 @@ body
 			padding-bottom: 47px
 			.footer-small
 				font-size: 13px
-	
+	.title-block
+		text-align: center
+		.bread-crumbs
+			padding-top: 52px
+			padding-bottom: 104px
+			.bread-crumbs-link
+				color: #000
+				font-weight: 300
+				font-size: 16px
+				padding-right: 10px
+				transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out
+				&:hover
+					color: #b9b9b9
+			.bread-crumbs-span
+				color: #858585
+				font-weight: 300
+				padding-right: 10px
+	.description
+		padding-bottom: 123px
+		.description-title
+			font-size: 48px
+			text-align: center
+			padding-bottom: 52px
+			font-weight: 700
+			color: #000
+		.description-descr
+			.description-text
+				font-size: 18px
+				color: #000
+				padding-bottom: 46px
+		.item
+			width: 83%
+			margin: auto
+			.slide-images
+				position: relative
+				&>img
+					opacity: 0
+					width: 100%
+					height: 0
+					&.active
+						opacity: 1
+						height: auto
+			.slide-buttons
+				cursor: pointer
+				position: absolute
+				width: 100%
+				top: 41%
+				.first-button
+					left: 23px
+					transform: rotate(180deg)
+					position: absolute
+					width: 30px
+					height: 30px
+					background-color: #e8e8e8
+					border-radius: 100%
+				.second-button
+					position: absolute
+					right: 23px
+					width: 30px
+					height: 30px
+					background-color: #e8e8e8
+					border-radius: 100%
+	.peculiarities
+		padding-bottom: 135px
+		.peculiarities-title
+			color: #000
+			font-weight: 700
+			font-size: 30px
+			padding-bottom: 40px
+		.peculiarities-descr,
+		.peculiarities-description,
+		.peculiarities-descr-text,
+		.peculiarities-item
+			font-size: 18px
+			color: #000
+		.peculiarities-descr
+			padding-bottom: 45px
+		.peculiarities-description
+			padding-bottom: 43px
+		.peculiarities-list
+			padding-top: 17px
+			list-style-type: disc
+			padding-left: 21px
+	.choice
+		.chois-general
+			display: flex
+			.choice-block-img
+				padding-right: 86px
+			.choice-block-info
+				.choice-title
+					text-align: center
+					font-weight: 700
+					font-size: 30px
+					padding-bottom: 86px
+					color: #000
+				.choice-descr,
+				.choice-descr,
+				.choice-item,
+				.choice-description
+					font-size: 19px
+					color: #000
+					font-weight: 400
+					line-height: 1.55
+				.choice-descr
+					text-align: center
+				.choice-list
+					list-style-type: disc
+					padding-bottom: 49px
+					padding-top: 25px
+					.choice-item
+						text-align: center
+						padding-left: 40px
+				.choice-description
+					text-align: center
 
 
 

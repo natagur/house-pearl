@@ -93,6 +93,24 @@ $(function(){
 
         event.preventDefault();
     });
-   
+    $(document).on('click', '.header-menu-burger', function(event){
+        $(this).hide();
+        // $('.header-nav').show(1000);
+        $('.header-menu-left').show();
+        
+        $('.header-nav').addClass('active');
+
+        event.preventDefault();
+    });
+
+    $(document).on('click', '.header-right-icon', function(event){
+        $('.header-nav').removeClass("active");
+        // $('.header-nav').hide();
+        $('.header-menu-left').hide();
+        $('.header-menu-burger').show();
+        
+
+        event.preventDefault();
+    });
 })
 
