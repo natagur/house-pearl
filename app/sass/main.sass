@@ -121,12 +121,14 @@ body
 					padding: 48px 40px 38px
 					max-height: 358px
 					.header-list-item
+						position: relative
 						font-size: 24px
 						padding-bottom: 15px
 						color: #fff
 						&:hover
 							.header-link-list
 								display: block
+								margin-top: 14px
 						.header-link
 							&:active
 								color: #b2c2be
@@ -142,29 +144,32 @@ body
 								margin-top: 15px
 						.header-link-list
 							display: none
-							width: 150px
+							width: 52%
 							background: #fff
-							padding: 10px
+							padding: 8px 4px
 							text-align: center
 							position: absolute
-							top: -17px
-							left: 10px
+							top: 33px
+							left: -12px
+							z-index: 1
 							&::before
 								content: ""
 								border: solid transparent
 								border-top-color: #fff
 								border-width: 10px
 								position: absolute
-								bottom: -20px
+								transform: rotate(180deg)
+								top: -20px
 								left: 45%
 								transition: 3s ease
 							.header-link-item
+								font-size: 14px
+								padding-bottom: 10px
 								.header-link-project
 									color: #000
 									font-size: 14px
 									font-weight: 600
 									line-height: 1.35
-					.header-list-item-tel,
 					.header-list-item-mail,
 					.header-list-item-descr,
 					.header-list-item-description,
@@ -1573,6 +1578,7 @@ body
 			list-style-type: disc
 			padding-left: 21px
 	.choice
+		padding-bottom: 118px
 		.chois-general
 			display: flex
 			.choice-block-img
@@ -1603,6 +1609,135 @@ body
 						padding-left: 40px
 				.choice-description
 					text-align: center
+	.registration
+		padding-bottom: 57px
+		.registration-title
+			font-weight: 700
+			color: #000
+			font-size: 30px
+			padding-bottom: 70px
+		.registration-descr,
+		.registration-item,
+		.registration-descr-bottom
+			line-height: 1.55
+			color: #000
+			font-weight: 400
+			font-size: 18px
+		.registration-list
+			list-style-type: disc
+			padding-left: 21px
+			padding-bottom: 46px
+
+	.section-cottage
+		font-weight: 700 
+		font-size: 30px
+		color: #000000
+	.cottage-desc
+		color: #000000
+		font-size: 20px
+		font-weight: 400 
+		line-height: 1.55
+	.cottege-item
+		color: #000000
+		font-size: 20px
+		font-weight: 400 
+		line-height: 1.55
+	.cottage
+		padding-bottom: 56px
+		.section-title-cottage
+			font-weight: 700
+			font-size: 48px
+			color: #000000
+			padding-bottom: 49px
+			text-align: center
+	.cottage-description
+		padding-bottom: 99px
+		.cottege-title
+			padding-bottom: 42px
+		.cottage-text
+			padding-bottom: 18px
+		.cottege-list
+			list-style-type: disc
+			padding-left: 23px
+			line-height: 1.55
+	.projects-cottege
+		padding-bottom: 73px
+		.projects-cottege-container
+			display: flex
+			.progect-cottege-images
+				width: 363%
+				margin-right: 30px
+				&>img
+					width: 100%
+			.progect-cottege-small
+				margin-top: -48px
+				.projects-title
+					padding-bottom: 25px
+					padding-left: 35px
+	.application
+		padding-bottom: 67px
+		.application-title
+			padding-bottom: 42px
+			padding-left: 105px
+		.application-desc
+			padding-bottom: 50px
+		.application-list
+			list-style-type: disc
+			padding-bottom: 50px
+			padding-left: 24px
+			.application-item
+				padding: 0
+	
+	.country-house-descr,
+	.advantages-item
+		color: #000000
+		font-size: 20px
+		line-height: 1.55
+		font-weight: 400
+	.section-titles
+		color: #000000
+		font-size: 30px
+		line-height: 1.55
+		font-weight: 700
+	.advantages-list
+		list-style-type: disc
+		padding-left: 23px
+	.country-house
+		padding-bottom: 39px
+		.section-country-house
+			font-size: 48px
+			color: #000000
+			font-weight: 700
+			padding-bottom: 75px
+			text-align: center
+	.youtube.zagorodnye
+		padding: 0
+	.advantages
+		padding-top: 37px
+		padding-bottom: 90px
+		.advantages-title
+			padding-bottom: 30px
+		.advantages-descr
+			padding-bottom: 30px
+	.section-chois-home
+		padding-bottom: 50px
+		.section-chois-home-title
+			padding-bottom: 59px
+		.section-chois-home-images
+			text-align: center
+			padding-bottom: 66px
+		.section-chois-home-block
+			width: 53%
+			padding-bottom: 50px
+			.section-chois-home-desc
+				padding-bottom: 20px
+		.section-chois-home-descr
+			padding-bottom: 40px
+				
+
+
+
+
 
 
 
