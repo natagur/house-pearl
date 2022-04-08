@@ -295,15 +295,16 @@ body
 					content: ""
 					background: url("/images/discount.svg")
 					background-repeat: no-repeat
-					background-position: center
+					background-position: center 47px
 					opacity: 0.15
-					top: 0
-					left: 0
+					top: -27px
+					background-size: 13%
+					left: -90px
 					bottom: 0
 					right: 0
 					position: absolute
 					z-index: -1
-					height: 150px
+					height: 131px
 					@media (max-width: 1162px)
 						display: none
 				.item
@@ -480,17 +481,21 @@ body
 		@media (max-width: 479px)
 			padding: 0
 		.container
-			display: block
+			display: flex
+			justify-content: space-between
 			@media (max-width: 1162px)
+				display: block
 				width: calc(100% - 40px)
 				padding: 20px
 			iframe
-				&:first-child
-					margin-right: 20px
-					@media (max-width: 1162px)
-						margin-right: 0
-						&:first-child
-							margin-bottom: 20px
+				width: 45%
+				// &:first-child
+				// 	margin-right: 20px
+				@media (max-width: 1162px)
+					margin-right: 0
+					width: 100%
+					&:first-child
+						margin-bottom: 20px
 	section.life-for-pleasure
 		text-align: center
 		margin-bottom: 80px
@@ -530,7 +535,7 @@ body
 		.main-house
 			margin-top: 120px
 			display: flex
-			justify-content: space-between
+			justify-content: space-around
 			@media (max-width: 1162px)
 				margin-top: 50px
 				display: block
@@ -1726,14 +1731,150 @@ body
 		.section-chois-home-images
 			text-align: center
 			padding-bottom: 66px
+			&>img
+				@media (max-width: 1162px)
+					width: 100%
 		.section-chois-home-block
 			width: 53%
 			padding-bottom: 50px
+			@media (max-width: 1162px)
+				width: 100%
 			.section-chois-home-desc
 				padding-bottom: 20px
 		.section-chois-home-descr
 			padding-bottom: 40px
-				
+
+	.section-mortgage-title
+		font-size: 48px
+		color: #000000
+		font-weight: 700
+	.mortgage-desc,
+	.mortgage-item
+		color: #000000
+		font-size: 20px
+		line-height: 1.55
+		font-weight: 400
+	.section-conditions
+		color: #000000
+		font-size: 30px
+		line-height: 1.55
+		font-weight: 700
+		padding-bottom: 47px
+	.mortgage-list
+		list-style-type: disc
+		padding-left: 23px
+		line-height: 1.55
+		padding-bottom: 50px
+	.mortgage,
+	.conditions,
+	.documentation,
+	.offer
+		padding-bottom: 80px
+		.section-mortgage-title
+			padding-bottom: 58px
+			text-align: center
+		.mortgage-desc
+			padding-bottom: 45px
+		.mortgage-block
+			display: flex
+			padding-left: 23px
+			.mortgage-images
+				padding-right: 47px
+			.mortgage-info
+				.mortgage-descripton
+					padding-bottom: 10px
+	.offer
+		.offer-desc
+			padding-bottom: 10px
+
+	.section-purchase-title
+		color: #000000
+		font-size: 28px
+		font-weight: 700
+		text-align: center
+		padding-bottom: 46px
+	.section-village-title
+		color: #000000
+		font-weight: 700
+		font-size: 20px
+		padding-bottom: 50px
+	.village-item,
+	.purchase-descr
+		color: #000000
+		font-size: 20px
+		font-weight: 400
+	.village-list
+		list-style-type: disc
+		padding-left: 23px
+		line-height: 1.55
+		padding-bottom: 40px
+	.purchase-descr,
+	.options-bottom
+		padding-bottom: 30px
+	.main-article
+		@media (max-width: 1162px)
+			padding: 30px
+	.documentation
+		.section-documentation-title
+			color: #000000
+			font-size: 39px
+			font-weight: 700
+			padding-bottom: 50px
+			text-align: center
+		.documentation-link
+			font-size: 20px
+			line-height: 1.55
+			font-weight: 700
+			text-align: center
+			color: #fe8562
+			text-decoration: revert
+			.documentation-descr
+				margin: auto
+				margin-bottom: 34px
+				width: 36%
+		.documentation-block-img
+			display: flex
+			justify-content: center
+			margin-bottom: 34px
+			&>img
+				box-shadow: 10px 10px 50px 0px rgb(137 214 55 / 40%)
+				cursor: zoom-in
+				&:first-child
+					margin-right: 98px
+	.popup 
+		position: fixed
+		background: #fff
+		width: 100%
+		height: 100%
+		top: 0px
+		left: 0px
+		display: none
+		.wrapper 
+			background: white
+			max-width: 900px
+			height: 90%
+			margin: 1% auto
+			border-radius: 5px
+			position: relative
+			.popup-window-close-icon
+				color: #000
+				width: 20px
+			.close 
+				color: black
+				position: absolute
+				right: 10px
+				font-size: 20px
+				text-decoration: none
+				top: 8px
+			.content 
+				text-align: center
+				padding: 10px
+				height: 90%
+
+
+
+
+
 
 
 

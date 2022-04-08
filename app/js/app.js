@@ -104,7 +104,7 @@ $(function(){
     });
 
     $(document).on('click', '.header-right-icon', function(event){
-        $('.header-nav').removeClass("active");
+        $('.header-nav').removeClass('active');
         // $('.header-nav').hide();
         $('.header-menu-left').hide();
         $('.header-menu-burger').show();
@@ -112,5 +112,18 @@ $(function(){
 
         event.preventDefault();
     });
+    $(document).on('click', '.documentation-img', function(event){
+        $('.popup').show();
+        
+        console.log($(this).attr('src'));
+        $('.popup .wrapper .content>img').attr('src',$(this).attr('src'));
+
+        event.preventDefault();
+    });
+        $(".popup .close").click(function(event){
+        $(".popup").hide();
+        event.preventDefault();
+    });
+
 })
 
