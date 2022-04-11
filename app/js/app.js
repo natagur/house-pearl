@@ -27,7 +27,7 @@ $(function(){
     clickSliderList();
 
     $(document).on('click', '.construction-choice-item:not(.active)', function(event){
-        $(this).parent().find('.construction-choice-item').hide();
+        // $(this).parent().find('.construction-choice-item').hide();
         $(this).parent().find('.construction-choice-item').removeClass('active');
         $(this).addClass('active');
         
