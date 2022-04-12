@@ -29,8 +29,8 @@ $(function(){
     $(document).on('click', '.construction-choice-item:not(.active)', function(event){
         // $(this).parent().find('.construction-choice-item').hide();
         $(this).parent().find('.construction-choice-item').removeClass('active');
+        $(this).parent().removeClass('active');
         $(this).addClass('active');
-        
         
         $('.construction-choice-block-link .construction-choice-block').removeClass('active');
         $('.construction-choice-block-link .construction-choice-block').eq($(this).index()).addClass('active');
@@ -38,7 +38,7 @@ $(function(){
         event.preventDefault();
     });
     $(document).on('click', '.construction-choice-item.active', function(event){
-        $(this).parent().find('.construction-choice-item').show();
+        $(this).parent().addClass('active');
 
         event.preventDefault();
     });
@@ -98,12 +98,14 @@ $(function(){
         // $('.header-nav').show(1000);
         $('.header-menu-left').show();
         
+        $('.header-menu-right').addClass('active');
         $('.header-nav').addClass('active');
 
         event.preventDefault();
     });
 
     $(document).on('click', '.header-right-icon', function(event){
+        $('.header-menu-right').removeClass('active');
         $('.header-nav').removeClass('active');
         // $('.header-nav').hide();
         $('.header-menu-left').hide();

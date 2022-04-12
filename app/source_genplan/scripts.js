@@ -521,7 +521,7 @@
         },
     };
 
-    document.body.append(document.querySelector(".mobile-modal"))
+    // document.body.append(document.querySelector(".mobile-modal"))
 
 
     var areaMap = document.querySelector('#genplan-svg')

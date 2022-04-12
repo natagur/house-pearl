@@ -293,7 +293,7 @@ body
 					display: flex
 				@media (max-width: 479px)
 					display: block
-
+					margin-bottom: 0
 				&:after
 					content: ""
 					background: url("/images/discount.svg")
@@ -309,7 +309,16 @@ body
 					z-index: -1
 					height: 131px
 					@media (max-width: 1162px)
-						display: none
+						display: block
+						top: -11px
+						background-size: 21%
+						left: -46px
+					@media (max-width: 479px)
+						display: block
+						position: inherit
+						background-size: 40%
+						left: 3px
+						height: 146px
 				.item
 					display: flex
 					width: 25%
@@ -353,6 +362,8 @@ body
 		background-color: #00352a
 		padding-top: 20px
 		padding-bottom: 20px
+		@media (max-width: 479px)
+			padding-top: 0
 		.desc
 			@media (max-width: 1162px)
 				line-height: 1.55
@@ -1034,9 +1045,12 @@ body
 		.home-dream-preview
 			opacity: 0.8
 			background-color: #00352a
-			@media (max-width: 1162px)
-				margin-left: 60px
-				margin-right: 60px
+			// @media (max-width: 1162px)
+			// 	margin-left: 60px
+			// 	margin-right: 60px
+			@media (max-width: 479px)
+				margin-left: 0
+				margin-right: 0
 			.home-dream-list
 				padding: 44px 130px 49px 172px
 				display: flex
@@ -1047,6 +1061,7 @@ body
 					padding-left: 103px
 				@media (max-width: 479px)
 					display: block
+					padding-left: 35%
 				.home-dream-item
 					display: flex
 					flex-wrap: wrap
@@ -1159,6 +1174,10 @@ body
 						transition: all 0.5s ease-out
 						@media (max-width: 1162px)
 							color: #fff
+				&.active
+					.construction-choice-item
+						@media (max-width: 1162px)
+							display: block
 		.construction-choice-block-link
 			.construction-choice-block
 				opacity: 0
@@ -1527,7 +1546,7 @@ body
 				font-weight: 300
 				padding-right: 10px
 	.description
-		padding-bottom: 123px
+		padding-bottom: 30px
 		.description-title
 			font-size: 48px
 			text-align: center
@@ -1572,7 +1591,7 @@ body
 					background-color: #e8e8e8
 					border-radius: 100%
 	.peculiarities
-		padding-bottom: 135px
+		padding-bottom: 30px
 		.peculiarities-title
 			color: #000
 			font-weight: 700
@@ -1593,9 +1612,11 @@ body
 			list-style-type: disc
 			padding-left: 21px
 	.choice
-		padding-bottom: 118px
+		padding-bottom: 50px
 		.chois-general
 			display: flex
+			@media (max-width: 1162px)
+				display: block
 			.choice-block-img
 				padding-right: 86px
 			.choice-block-info
@@ -1679,11 +1700,15 @@ body
 		padding-bottom: 73px
 		.projects-cottege-container
 			display: flex
+			@media (max-width: 1162px)
+				flex-wrap: wrap
 			.progect-cottege-images
 				width: 363%
 				margin-right: 30px
 				&>img
 					width: 100%
+					@media (max-width: 1162px)
+						padding-bottom: 59px
 			.progect-cottege-small
 				margin-top: -48px
 				.projects-title
@@ -1727,9 +1752,11 @@ body
 			text-align: center
 	.youtube.zagorodnye
 		padding: 0
+		.container iframe
+			width: 100%
 	.advantages
 		padding-top: 37px
-		padding-bottom: 90px
+		padding-bottom: 40px
 		.advantages-title
 			padding-bottom: 30px
 		.advantages-descr
