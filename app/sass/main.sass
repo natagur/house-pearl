@@ -645,6 +645,8 @@ body
 			.item
 				&:nth-child(2n)
 					margin-right: 0
+				&:last-child
+					margin-right: 0
 				.size
 					color: #ffffff
 					font-size: 43px
@@ -1973,6 +1975,152 @@ body
 		margin: auto
 		padding-top: 60px
 		padding-bottom: 50px
+
+	.item-home
+		margin-bottom: 30px
+		.item-home-title
+			color: #000000
+			font-size: 39px
+			line-height: 1.55
+			font-weight: 700
+			margin-bottom: 50px
+			text-align: center
+		.item-home-button
+			display: flex
+			justify-content: space-between
+			margin: auto
+			margin-bottom: 150px
+			border: 1px solid #222
+			border-radius: 3px
+			width: 33%
+			.btn-grey
+				color: #000000
+				font-size: 14px
+				font-weight: 400
+				transition: font-weight,color 0.3s ease
+				padding: 14px 14px
+				width: 50%
+				text-align: center
+			.btn-brown
+				color: #000000
+				font-size: 14px
+				font-weight: 400
+				transition: font-weight,color 0.3s ease
+				padding: 14px 14px
+				text-align: center
+				width: 50%
+			.active
+				font-weight: 600
+				color: #ffffff
+				background: #222
+	.slider.item.active.home-slider-brown
+		display: none
+		// .slide-buttons
+		// 	.first-button-slider
+		// 		width: 40px
+		// 		height: 40px
+		// 		background-color: rgba(232,232,232,1)
+	.house-plan-item,
+	.house-plan-description
+		color: #000000
+		font-size: 20px
+		line-height: 1.55
+		font-weight: 400
+	.house-plan-title
+		font-weight: 700
+		color: #000000
+		font-size: 20px
+		margin-bottom: 40px
+	.house-plan-left-list,
+	.house-plan-right-list
+		list-style-type: inherit
+		margin-left: 23px
+	.house-plan
+		margin-bottom: 126px
+		.house-plan-block-top
+			display: flex
+			justify-content: space-between
+			margin-bottom: 70px
+			.house-plan-picture
+				width: 40%
+				margin-right: 95px
+			.house-plan-ifno
+				width: 40%
+				.house-plan-list
+					margin-bottom: 30px
+
+		.house-plan-block-bottom
+			display: flex
+			justify-content: space-between
+			.house-plan-block-left
+				width: 40%
+				margin-right: 50px
+			.house-plan-block-right
+				width: 40%
+	.plan-bottom
+		margin: auto
+		margin-bottom: 90px
+		.container
+			text-align: center
+			.plan-bottom-descr
+				text-align: center
+				color: #000000
+				font-size: 24px
+				line-height: 1.55
+				font-weight: 700
+			.plan-bottom-descr
+				&:nth-child(2n)
+					margin-bottom: 40px
+			.plan-button-link
+				color: #ffffff
+				font-size: 17px
+				line-height: 1.55
+				font-weight: 600
+				border-radius: 30px
+				background-color: #00362a
+				transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out
+				padding: 17px 29px
+	.popup 
+		position: fixed
+		background: #0000006b
+		width: 100%
+		height: 100%
+		top: 0px
+		left: 0px
+		display: none
+		.wrapper
+			background: white
+			max-width: 500px
+			height: 90%
+			margin: 1% auto
+			border-radius: 5px
+			position: relative
+			.close 
+				position: absolute
+				right: -115px
+				font-size: 35px
+				color: #fff
+				.content 
+					text-align: center
+					padding: 10px
+					height: 90%
+					.popup-title
+						font-weight: 700
+						font-size: 36px
+						line-height: 1.23
+						margin-bottom: 11px
+						color: #000
+					.popup-descr
+						font-size: 16px
+						line-height: 1.55
+						font-weight: 400
+						color: #000
+
+
+
+
+
+
 
 
 

@@ -126,6 +126,26 @@ $(function(){
         $(".popup").hide();
         event.preventDefault();
     });
+    $(document).on('click', '.btn-grey', function(event){
+        $('.btn-brown').removeClass('active');
+        $('.btn-grey').addClass('active');
+        $('.home-slider-grey').show();
+        $('.home-slider-brown').hide();
+        
+        event.preventDefault();
+    });
+    $(document).on('click', '.btn-brown', function(event){
+        $('.btn-grey').removeClass('active');
+        $('.btn-brown').addClass('active');
+        $('.home-slider-brown').show();
+        $('.home-slider-grey').hide();
+        
+        event.preventDefault();
+    });
+    $(document).on('click', '.plan-button-link', function(event){
+        $('.popup').show();
+        event.preventDefault();
+    });
 
 })
 
