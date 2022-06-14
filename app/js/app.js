@@ -9,19 +9,41 @@ function clickSlider(obj, newIndex){
 
 }
 function clickSliderList(){
-    let widthImg = parseInt($('.slider-naturele').css('width')) + 50;
-    let countImg = $('.slider-naturele').length;
+    let mainClass = "";
+    if ($('.home-slider-grey').length > 0) {
+        if ($('.home-slider-grey').css('display') == 'block') {
+            mainClass = ".home-slider-grey ";
+        } else if ($('.home-slider-brown').css('display') == 'block') {
+            mainClass = ".home-slider-brown ";
+        }
+    }
+    let widthImg = parseInt($(mainClass+'.slider-naturele').css('width')) + 50;
+    let countImg = 0;
+    if ($('.item-home').length > 0) {
+        countImg = $(mainClass+'.slider-naturele').length;
+    } else {
+        countImg = $('.slider-naturele').length;
+    }
     console.log('-------------');
     console.log(widthImg);
     console.log(countImg);
     
-    let left = (widthImg + 50) * $('.slider-naturele.active').index();
-    left = (widthImg * countImg) / 2 - left - 57;
+    let left = (widthImg + 50) * $(mainClass+'.slider-naturele.active').index() - 50;
+    console.log("left: "+left);
+    if ($('.item-home').length > 0) {
+        left = (widthImg * countImg) / 2 - left - ((widthImg-100) / 2);
+    } else {
+        left = (widthImg * countImg) / 2 - left - 57;
+    }
 
     console.log(left);
     console.log((widthImg * countImg/2));
     console.log($('.slider-naturele.active').index());
-    $('.slider-naturele').parent().css('left',left + 'px');
+    if ($('.item-home').length > 0) {
+        $('.item-home '+mainClass+'.slider-naturele').parent().css('left',left + 'px');
+    } else {
+        $('.slider-naturele').parent().css('left',left + 'px');
+    }
 }
 $(function(){
     clickSliderList();
@@ -124,6 +146,8 @@ $(function(){
     });
         $(".popup .close").click(function(event){
         $(".popup").hide();
+        $('body').css('overflow', 'auto')
+
         event.preventDefault();
     });
     $(document).on('click', '.btn-grey', function(event){
@@ -131,6 +155,8 @@ $(function(){
         $('.btn-grey').addClass('active');
         $('.home-slider-grey').show();
         $('.home-slider-brown').hide();
+
+        clickSliderList();
         
         event.preventDefault();
     });
@@ -139,13 +165,15 @@ $(function(){
         $('.btn-brown').addClass('active');
         $('.home-slider-brown').show();
         $('.home-slider-grey').hide();
+
+        clickSliderList();
         
         event.preventDefault();
     });
     $(document).on('click', '.plan-button-link', function(event){
         $('.popup').show();
+        $('body').css('overflow', 'hidden')
         event.preventDefault();
     });
-
 })
 

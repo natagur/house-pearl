@@ -781,6 +781,13 @@ body
 				padding-left: 140px
 				left: 0
 				top: 0
+				&>img
+					background-color: rgba(232,232,232,1)
+					display: block
+					width: 42px
+					height: 42px
+					border-radius:100%
+					margin-left: -194px
 				@media (max-width: 1162px)
 					width: 50px
 					padding: 0px
@@ -795,6 +802,13 @@ body
 				padding-left: 140px
 				right: 0
 				top: 0
+				&>img
+					background-color: rgba(232,232,232,1)
+					display: block
+					width: 42px
+					height: 42px
+					border-radius:100%
+					margin-right: -194px
 				@media (max-width: 1162px)
 					width: 50px
 					padding: 0px
@@ -2088,33 +2102,82 @@ body
 		top: 0px
 		left: 0px
 		display: none
+		overflow: auto
 		.wrapper
 			background: white
-			max-width: 500px
-			height: 90%
+			max-width: 600px
+			padding-bottom: 30px
 			margin: 1% auto
 			border-radius: 5px
+			margin-top: 70px
+			margin-bottom: 70px
 			position: relative
 			.close 
 				position: absolute
-				right: -115px
+				top: -9%
+				right: -54%
 				font-size: 35px
 				color: #fff
-				.content 
-					text-align: center
-					padding: 10px
-					height: 90%
-					.popup-title
-						font-weight: 700
-						font-size: 36px
-						line-height: 1.23
-						margin-bottom: 11px
-						color: #000
-					.popup-descr
+			.content 
+				text-align: center
+				// height: 100%
+				.popup-images>img
+					width: 100%
+				.popup-title
+					font-weight: 700
+					font-size: 36px
+					line-height: 1.23
+					margin-bottom: 11px
+					color: #000
+				.popup-descr
+					font-size: 16px
+					line-height: 1.55
+					font-weight: 400
+					color: #000
+					margin-bottom: 20px
+					padding-left: 25px
+					padding-right: 42px
+				.popup-form
+					margin-left: 30px
+					margin-right: 30px
+					width: 88%
+					display: block
+					height: 100%
+					input
+						width: 90%
 						font-size: 16px
-						line-height: 1.55
-						font-weight: 400
-						color: #000
+						color: #00352a
+						border: 1px solid #000
+						padding: 17px 23px
+						margin-bottom: 25px
+					.popup-button
+						color: #ffffff
+						background-color: #db7c2e
+						font-weight: 700
+						border: 0 none
+						padding: 15px 0px
+						width: 100%
+						border-radius: 5px
+						font-size: 16px
+.item-home
+	.slider
+		.slide-buttons
+			.first-button,
+			.second-button
+				display: flex
+				align-items: center
+				background: rgba(232,232,232,1)
+				height: calc(100% - 105px)
+				// &img
+				// 	width: 42px
+				// 	height: 42px
+			.second-button
+				&>img
+					transform: translateX(-193px)
+		.slide-click
+			bottom: 70px
+
+
 
 
 
